@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyClI2xwH_w5EgAjCZwNXVxm8n1T9lBw_NU",
-  authDomain: "leafyhaven.firebaseapp.com",
-  projectId: "leafyhaven",
-  storageBucket: "leafyhaven.firebasestorage.app",
-  messagingSenderId: "309478597571",
-  appId: "1:309478597571:web:4c6662e06e4e95d250d376",
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId,
 };
 
 // Initialize Firebase
