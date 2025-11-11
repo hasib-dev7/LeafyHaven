@@ -6,6 +6,7 @@ import Profile from "../Pages/Profile/Profile";
 import Login from "../AuthenticationPages/Login/Login";
 import Register from "../AuthenticationPages/Register/Register";
 import PlantsDetails from "../Pages/PlantsDetatils/PlantsDetails";
+import PrivateRouter from "./PrivateRouter";
 
 const router = createBrowserRouter([
   {
@@ -35,7 +36,11 @@ const router = createBrowserRouter([
       },
       {
         path: "plantsDetails/:id",
-        element: <PlantsDetails></PlantsDetails>,
+        element: (
+          <PrivateRouter>
+            <PlantsDetails></PlantsDetails>
+          </PrivateRouter>
+        ),
       },
     ],
   },
