@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Watering",
+    "description": "Most indoor plants prefer slightly moist soil. Water when the top 1-2 inches of soil feels dry.",
+    "icon": "💧"
+  },
+  {
+    "id": 2,
+    "title": "Sunlight",
+    "description": "Place your plants near bright, indirect sunlight. Direct harsh sunlight may burn the leaves.",
+    "icon": "🌤️"
+  },
+  {
+    "id": 3,
+    "title": "Fertilizing",
+    "description": "Use organic fertilizer once a month during the growing season for healthy and lush growth.",
+    "icon": "🌱"
+  }
+]

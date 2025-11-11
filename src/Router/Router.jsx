@@ -10,14 +10,12 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayouts></MainLayouts>,
+    hydrateFallbackElement:<p>Loading ...</p>,
     children: [
       {
         index: true,
         element: <Home></Home>,
-      },
-      {
-        path: "/",
-        element: <Home></Home>,
+       
       },
       {
         path: "plants",
