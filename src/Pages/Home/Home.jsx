@@ -15,7 +15,9 @@ const Home = () => {
   return (
     <>
       {/* hero section */}
-      <Hero></Hero>
+      <section className="pt-6">
+        <Hero></Hero>
+      </section>
       {/* home pager title and card section */}
       <section className="py-10">
         <div>

@@ -1,19 +1,37 @@
 import { use } from "react";
 import { Link } from "react-router";
 import { AuthContext } from "../../Context/AuthProvider/AuthContext";
+import { toast } from "react-toastify";
 const Login = () => {
-  const { signInUser } = use(AuthContext);
-  const handleLogin = (e) => {
+  const { signInUser, setUser } = use(AuthContext);
+  const handleLogin = async (e) => {
     e.preventDefault();
+    // get form values
     const email = e.target.email.value;
     const password = e.target.password.value;
-    signInUser(email, password)
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => {
-        console.log(err);
+    try {
+      const res = await signInUser(email, password);
+      const loginUser = res.user;
+      setUser(loginUser);
+      console.log(res);
+      const userName = res.user.displayName || "User"; // fallback
+
+      toast.success(`Welcome back, ${userName}! 🎉`, {
+        position: "top-right",
       });
+    } catch (err) {
+      console.log("Login error:", err);
+      // Customize error messages if needed
+      if (err.code === "auth/user-not-found") {
+        toast.error("No user found with this email.");
+      } else if (err.code === "auth/wrong-password") {
+        toast.error("Incorrect password. Please try again.");
+      } else if (err.code === "auth/invalid-email") {
+        toast.error("Please enter a valid email address.");
+      } else {
+        toast.error("Login failed. Please try again.");
+      }
+    }
   };
   return (
     <>

@@ -3,6 +3,7 @@ import {
   onAuthStateChanged,
   signInWithEmailAndPassword,
   signOut,
+  updateProfile,
 } from "firebase/auth";
 import { auth } from "../../firebase/firebase.init";
 import { AuthContext } from "./AuthContext";
@@ -21,6 +22,10 @@ const AuthProvider = ({ children }) => {
     setAuthLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
+  // update user profile
+  const updateUserProfile=(updateUser)=>{
+    return updateProfile(auth.currentUser,updateUser)
+  }
   //   logout
   const logOut = () => {
     setAuthLoading(true);
@@ -32,7 +37,7 @@ const AuthProvider = ({ children }) => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
       setAuthLoading(false);
-      // console.log(currentUser);
+      console.log(currentUser);
     });
     // the observer unmount
     return () => {
@@ -41,9 +46,11 @@ const AuthProvider = ({ children }) => {
   }, []);
   const userInfo = {
     user,
+    setUser,
     authLoading,
     createUser,
     signInUser,
+    updateUserProfile,
     logOut,
   };
   return <AuthContext value={userInfo}>{children}</AuthContext>;

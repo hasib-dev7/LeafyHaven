@@ -1,21 +1,71 @@
 import { use } from "react";
 import { Link } from "react-router";
 import { AuthContext } from "../../Context/AuthProvider/AuthContext";
+import { toast } from "react-toastify";
 
 const Register = () => {
-  const { createUser } = use(AuthContext);
-  const handleRegister = (e) => {
+  const { createUser, setUser, updateUserProfile } = use(AuthContext);
+  const handleRegister = async (e) => {
     e.preventDefault();
+    // get form values
     const email = e.target.email.value;
+    const name = e.target.name.value.trim(); // remove extra spaces
+    const photo = e.target.photo.value;
     const password = e.target.password.value;
-    // 
-    createUser(email, password)
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    // ---------- NAME VALIDATION ----------
+    if (name.length < 5) {
+      toast.error("Name must be at least 5 characters long.");
+      return;
+    }
+    // .........password validation..........
+    //  minimum 6 characters
+    if (password.length < 6) {
+      // form reset
+      e.target.reset();
+      toast.error("Password must be at least 6 characters lons.");
+      return;
+    }
+    //  lowercase & uppercase
+    if (!/[a-z]/.test(password) || !/[A-Z]/.test(password)) {
+      // form reset
+      e.target.reset();
+      toast.error(
+        "Password must include at least one uppercase and one lowercase letter."
+      );
+      return;
+    }
+    //  number
+    if (!/\d/.test(password)) {
+      // form reset
+      e.target.reset();
+      toast.error("Password must include at least one number.");
+      return;
+    }
+    // ---------- FIREBASE REGISTRATION ----------
+    try {
+      const res = await createUser(email, password);
+      const signUpUser = res.user;
+      updateUserProfile({ displayName: name, photoURL: photo });
+      setUser({ ...signUpUser, displayName: name, photoURL: photo });
+      console.log(signUpUser)
+      // form reset
+      e.target.reset();
+      toast.success(`Welcome, ${name}! Your account has been created.`);
+    } catch (err) {
+      // form reset
+      e.target.reset();
+      // customize Firebase error messages
+      if (err.code === "auth/email-already-in-use") {
+        toast.error("This email is already registered.");
+      } else if (err.code === "auth/invalid-email") {
+        toast.error("Please enter a valid email address.");
+      } else if (err.code === "auth/weak-password") {
+        toast.error("Password is too weak. Please follow the rules.");
+      } else {
+        toast.error("Registration failed. Please try again."); // generic fallback
+      }
+      console.log("Registration error:", err.code);
+    }
   };
   return (
     <>
@@ -60,7 +110,7 @@ const Register = () => {
                   placeholder="Enter Your Password"
                   required
                 />
-               
+
                 <button className="btn btn-neutral mt-4">Register</button>
               </fieldset>
               <p>
