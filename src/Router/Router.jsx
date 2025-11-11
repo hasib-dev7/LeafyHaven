@@ -7,12 +7,15 @@ import Login from "../AuthenticationPages/Login/Login";
 import Register from "../AuthenticationPages/Register/Register";
 import PlantsDetails from "../Pages/PlantsDetatils/PlantsDetails";
 import PrivateRouter from "./PrivateRouter";
+import AllErrorPages from "../Error/AllErrorPage/AllErrorPages";
+import LoadingSpinner from "../Component/LoadingSpinner/LoadingSpinner";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayouts></MainLayouts>,
-    hydrateFallbackElement: <p>Loading ...</p>,
+    errorElement: <AllErrorPages></AllErrorPages>,
+    hydrateFallbackElement: <LoadingSpinner></LoadingSpinner>,
     children: [
       {
         index: true,

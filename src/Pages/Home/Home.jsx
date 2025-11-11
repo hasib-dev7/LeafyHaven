@@ -3,11 +3,12 @@ import PlantCard from "../../Component/PlantCard/PlantCard";
 import usePlants from "../../Hooks/usePlants";
 import CareTips from "../../Component/CareTips/CareTips";
 import PlantsExperts from "../../Component/PlantsExperts/PlantsExperts";
+import LoadingSpinner from "../../Component/LoadingSpinner/LoadingSpinner";
 
 const Home = () => {
   const [plants, plantsLoading, error] = usePlants();
 
-  if (plantsLoading) return <p>Loading...</p>;
+  if (plantsLoading) return <LoadingSpinner></LoadingSpinner>;
   if (error) return <p className="text-red-500">Error : {error}</p>;
 
   const plantsHomePage = plants.slice(0, 6);

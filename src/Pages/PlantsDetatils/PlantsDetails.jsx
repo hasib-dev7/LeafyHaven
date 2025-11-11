@@ -2,11 +2,12 @@ import { useParams } from "react-router";
 import usePlants from "../../Hooks/usePlants";
 import { DollarSign, Star } from "lucide-react";
 import { toast } from "react-toastify";
+import LoadingSpinner from "../../Component/LoadingSpinner/LoadingSpinner";
 
 const PlantsDetails = () => {
   const { id } = useParams();
   const [plants, plantsLoading, error] = usePlants();
-  if (plantsLoading) return <p>Loading ...</p>;
+  if (plantsLoading) return <LoadingSpinner></LoadingSpinner>;
   if (error) return <p>Error : {error}</p>;
   // find plant card details id
   const plantsDetail = plants.find((p) => String(p.plantId) === id);
