@@ -7,7 +7,7 @@ const CareTips = () => {
 
   return (
     <>
-      <section className="py-16">
+   
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-slate-800 text-center">
             Plant Care Tips
@@ -32,7 +32,7 @@ const CareTips = () => {
             ))}
           </div>
         </div>
-      </section>
+      
     </>
   );
 };

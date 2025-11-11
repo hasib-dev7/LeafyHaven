@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Anika Rahman",
+    "role": "Indoor Plant Specialist",
+    "bio": "Focused on nurturing low-light indoor plants, guiding proper propagation techniques, and providing effective pest prevention and gentle treatment solutions for long-term plant health.",
+    "img": "https://i.ibb.co.com/qLRLgz96/48247-jpeg.webp"
+  },
+  {
+    "id": 2,
+    "name": "Rafi Hossain",
+    "role": "Succulent & Cactus Expert",
+    "bio": "Expert in creating balanced soil mixes, designing precise watering schedules, and crafting bonsai-style plant shaping techniques for healthy, compact growth.",
+    "img": "https://i.ibb.co.com/PZK9gbvs/Mike-with-Raven.webp"
+  },
+  {
+    "id": 3,
+    "name": "Maya Khan",
+    "role": "Foliage & Humidity Care",
+    "bio": "Specializes in creating ideal humidity zones, maintaining vibrant foliage, and offering detailed guidance for tropical plant health, growth, and long-term care.",
+    "img": "https://i.ibb.co.com/tPT8wj3M/maya.webp"
+  },
+  {
+    "id": 4,
+    "name": "Jahid Ali",
+    "role": "Plant Clinic Consultant",
+    "bio": "Diagnoses common plant pests and diseases, identifies root causes, and provides personalized recovery and long-term care plans to restore plant health.",
+    "img": "https://i.ibb.co.com/212VQbRq/Vladan-Nikolic.png"
+  }
+]

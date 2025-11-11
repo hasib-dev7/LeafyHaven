@@ -7,7 +7,7 @@
     "rating": 4.8,
     "availableStock": 10,
     "careLevel": "Easy",
-    "description": "A hardy indoor plant that survives low light and helps purify indoor air.",
+    "description": "The Snake Plant, also known as Sansevieria, is a remarkably resilient and low-maintenance indoor plant that thrives in a wide range of lighting conditions, from low light to indirect sunlight. Its long, upright, sword-like leaves with vibrant green hues bring a modern and elegant aesthetic to any living space or office. Beyond its striking appearance, the Snake Plant actively improves indoor air quality by removing toxins such as formaldehyde, xylene, and toluene while releasing oxygen, making your home healthier and fresher. Ideal for beginners and busy plant enthusiasts, this hardy plant requires minimal watering and care, making it a perfect addition to enhance both the beauty and wellbeing of your indoor environment.",
     "image": "https://i.ibb.co.com/zTRbnk8c/snake-plant.webp",
     "providerName": "UrbanGreen Studio"
   },
@@ -19,7 +19,7 @@
     "rating": 4.6,
     "availableStock": 8,
     "careLevel": "Medium",
-    "description": "Beautiful white flowers that bring elegance and freshness to any space.",
+    "description": "The Peace Lily is a graceful and elegant flowering plant, admired for its glossy green leaves and pristine white blooms that brighten up any indoor space. Known for its air-purifying qualities, it helps remove toxins like ammonia, benzene, and formaldehyde, contributing to a healthier living environment. Thriving in medium to low light conditions, the Peace Lily is relatively easy to care for, requiring moderate watering and occasional fertilization. Its serene appearance and gentle fragrance make it a perfect addition to homes, offices, or any area where tranquility and beauty are desired, bringing both aesthetic charm and wellness benefits.",
     "image": "https://i.ibb.co.com/C5sYkhvX/peace-lily.webp",
     "providerName": "GreenHouse Hub"
   },
@@ -31,7 +31,7 @@
     "rating": 4.7,
     "availableStock": 14,
     "careLevel": "Easy",
-    "description": "Thrives on neglect; perfect for busy or forgetful plant owners.",
+    "description": "The ZZ Plant, or Zamioculcas zamiifolia, is a hardy and exceptionally low-maintenance indoor plant, ideal for busy individuals or those new to plant care. Its thick, glossy, dark green leaves grow upright, adding a modern and sophisticated touch to any room or office. Renowned for its ability to thrive even with minimal attention, the ZZ Plant tolerates low light, irregular watering, and varying indoor conditions, making it virtually indestructible. Beyond its aesthetic appeal, it also contributes to improved indoor air quality by removing toxins and producing oxygen. This resilient plant is a perfect choice for those seeking both style and practicality in their indoor greenery.",
     "image": "https://i.ibb.co.com/DH2LQy3D/ZZ-Plant.webp",
     "providerName": "Leaf & Root Co."
   },
@@ -43,7 +43,7 @@
     "rating": 4.5,
     "availableStock": 12,
     "careLevel": "Easy",
-    "description": "A medicinal plant known for healing properties and low-care nature.",
+    "description": "Aloe Vera is a versatile and hardy medicinal plant, widely celebrated for its healing properties and minimal care requirements. Its thick, succulent leaves store a natural gel that soothes skin irritations, burns, and minor cuts, making it a must-have in every home. Thriving in bright, indirect sunlight and requiring only occasional watering, Aloe Vera is perfect for beginners or those seeking low-maintenance greenery. Beyond its therapeutic uses, its vibrant green foliage adds a refreshing touch to any indoor space, contributing to a healthier and more aesthetically pleasing environment.",
     "image": "https://i.ibb.co.com/DDGkZhkQ/Aloe-Vera.webp",
     "providerName": "UrbanGreen Studio"
   },
@@ -55,7 +55,7 @@
     "rating": 4.4,
     "availableStock": 9,
     "careLevel": "Medium",
-    "description": "A tropical plant that adds lush greenery and improves air quality.",
+    "description": "The Areca Palm is a beautiful tropical indoor plant known for its feathery, arching fronds that bring lush greenery and a sense of tranquility to any room. Beyond its decorative appeal, it acts as a natural air purifier, effectively removing toxins and adding moisture to the air, making your indoor environment healthier and more comfortable. Thriving in medium to bright indirect light, the Areca Palm requires moderate watering and occasional fertilization, making it suitable for both beginners and experienced plant enthusiasts. Its elegant presence adds a touch of nature and sophistication to homes, offices, or any indoor space.",
     "image": "https://i.ibb.co.com/gFQxKRWM/Areca-Palm.webp",
     "providerName": "PalmRoots Nursery"
   },
@@ -67,7 +67,7 @@
     "rating": 4.6,
     "availableStock": 16,
     "careLevel": "Easy",
-    "description": "Great beginner plant that filters toxins and grows fast.",
+    "description": "The Spider Plant is a popular and resilient indoor plant, perfect for beginners due to its easy care requirements and fast growth. Its arching green leaves with white stripes create a vibrant and refreshing look, while its small offshoots, or 'spiderettes,' can be propagated to grow new plants. Renowned for its air-purifying qualities, the Spider Plant effectively removes toxins such as formaldehyde and xylene, improving indoor air quality. Thriving in bright, indirect light and tolerating occasional neglect, it adds both aesthetic charm and health benefits to homes, offices, or any indoor space.",
     "image": "https://i.ibb.co.com/nqfDzF27/Spider-Plant.webp",
     "providerName": "GreenHouse Hub"
   },
@@ -79,7 +79,7 @@
     "rating": 4.7,
     "availableStock": 11,
     "careLevel": "Easy",
-    "description": "Heart-shaped leaves and grows well in low to moderate light.",
+    "description": "The Philodendron is a popular indoor foliage plant, admired for its large, heart-shaped leaves that bring a touch of lush greenery to any space. Thriving in low to moderate light, it is ideal for both homes and offices, making it a versatile addition to interior décor. Easy to care for, the Philodendron requires moderate watering and occasional fertilization, making it perfect for beginners or busy plant enthusiasts. Its graceful trailing vines and vibrant green foliage not only enhance the aesthetic appeal of any room but also contribute to a healthier indoor environment by improving air quality.",
     "image": "https://i.ibb.co.com/cKFWynJ1/Philodendron.webp",
     "providerName": "Leaf & Root Co."
   },
@@ -91,7 +91,7 @@
     "rating": 4.5,
     "availableStock": 6,
     "careLevel": "Medium",
-    "description": "Thick glossy leaves and a bold look to enhance home decor.",
+    "description": "The Rubber Plant is a striking indoor foliage plant, known for its thick, glossy leaves that create a bold and modern statement in any room. Its deep green foliage adds a sense of sophistication and vibrancy, making it an excellent choice for enhancing home or office décor. Thriving in medium to bright indirect light, the Rubber Plant requires moderate watering and occasional fertilization. This resilient plant is perfect for both beginner and experienced plant owners, and it also contributes to improved indoor air quality by filtering toxins, creating a healthier and more refreshing living environment.",
     "image": "https://i.ibb.co.com/ZRDptcW9/Rubber-Plant.webp",
     "providerName": "UrbanGreen Studio"
   },
@@ -103,7 +103,7 @@
     "rating": 4.3,
     "availableStock": 13,
     "careLevel": "Medium",
-    "description": "Trailing vine perfect for hanging pots and shelf displays.",
+    "description": "English Ivy is a charming trailing vine, ideal for hanging pots, shelves, or vertical indoor gardens. Its glossy green leaves and cascading growth pattern bring a natural and elegant look to any space, making it perfect for both modern and classic interiors. Thriving in medium light and tolerating occasional neglect, English Ivy is relatively easy to care for, requiring moderate watering and well-draining soil. Beyond its decorative appeal, this versatile plant also helps improve indoor air quality by filtering airborne toxins, creating a healthier and more inviting environment.",
     "image": "https://i.ibb.co.com/SXgy9NLQ/English-Ivy.webp",
     "providerName": "Leaf & Root Co."
   },
@@ -115,7 +115,7 @@
     "rating": 4.9,
     "availableStock": 7,
     "careLevel": "Medium",
-    "description": "Large split leaves that give a tropical modern aesthetic.",
+    "description": "Monstera Deliciosa, often referred to as the Swiss Cheese Plant, is a striking decorative indoor plant known for its large, glossy, split leaves that bring a tropical and modern aesthetic to any space. Thriving in medium to bright indirect light, it is relatively easy to care for, requiring moderate watering and occasional fertilization. Its dramatic foliage adds a bold, stylish touch to homes, offices, or living spaces, making it a centerpiece in interior décor. Beyond its visual appeal, Monstera Deliciosa also contributes to a healthier indoor environment by filtering toxins and improving air quality.",
     "image": "https://i.ibb.co.com/ycSsn0mZ/Monstera-Deliciosa.webp",
     "providerName": "GreenHouse Hub"
   },
@@ -127,7 +127,7 @@
     "rating": 4.8,
     "availableStock": 20,
     "careLevel": "Easy",
-    "description": "Hardy trailing vine that grows fast and thrives in low light.",
+    "description": "Pothos Golden is a hardy and fast-growing trailing vine, perfect for hanging baskets, shelves, or as a cascading indoor plant. Its heart-shaped leaves feature beautiful golden variegation that adds vibrancy and charm to any space. Known for its adaptability, Pothos Golden thrives in low to medium light and requires minimal care, making it ideal for beginners or busy plant enthusiasts. Beyond its aesthetic appeal, it helps improve indoor air quality by filtering toxins, creating a healthier and more refreshing environment for homes, offices, or apartments.",
     "image": "https://i.ibb.co.com/ZZv7W6j/Pothos-Golden.webp",
     "providerName": "UrbanGreen Studio"
   },
@@ -139,7 +139,7 @@
     "rating": 4.2,
     "availableStock": 9,
     "careLevel": "Medium",
-    "description": "Beautiful fern that adds a soft, leafy texture to any room.",
+    "description": "The Boston Fern is a lush and elegant indoor plant, loved for its delicate, feathery fronds that add a soft, leafy texture to any room. Thriving in high humidity and indirect light, it creates a refreshing and natural ambiance in homes, offices, or indoor gardens. Regular misting and moderate watering keep the fronds vibrant and healthy, making it perfect for plant enthusiasts who enjoy nurturing greenery. Beyond its decorative appeal, the Boston Fern also helps purify indoor air by removing pollutants, contributing to a healthier and more inviting living environment.",
     "image": "https://i.ibb.co.com/60hB9XNq/Boston-Fern.webp",
     "providerName": "PalmRoots Nursery"
   }

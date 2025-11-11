@@ -14,7 +14,7 @@ const usePlants = () => {
         setTimeout(()=>{
           setPlants(respons.data)
           setPlantsLoading(false)
-        },100)
+        },200)
       }catch(err){
         setError(err.message)
         setPlantsLoading(false)

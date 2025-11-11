@@ -2,6 +2,7 @@ import Hero from "../../Component/HeroSection/Hero";
 import PlantCard from "../../Component/PlantCard/PlantCard";
 import usePlants from "../../Hooks/usePlants";
 import CareTips from "../../Component/CareTips/CareTips";
+import PlantsExperts from "../../Component/PlantsExperts/PlantsExperts";
 
 const Home = () => {
   const [plants, plantsLoading, error] = usePlants();
@@ -35,10 +36,13 @@ const Home = () => {
         </div>
       </section>
       {/* care tips section */}
-      <section>
+      <section className="py-16">
         <CareTips></CareTips>
       </section>
-      {/*  */}
+      {/* plants experts section */}
+      <section className="pb-16">
+        <PlantsExperts></PlantsExperts>
+      </section>
     </>
   );
 };

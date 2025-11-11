@@ -5,17 +5,17 @@ import Plants from "../Pages/Plants/Plants";
 import Profile from "../Pages/Profile/Profile";
 import Login from "../AuthenticationPages/Login/Login";
 import Register from "../AuthenticationPages/Register/Register";
+import PlantsDetails from "../Pages/PlantsDetatils/PlantsDetails";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayouts></MainLayouts>,
-    hydrateFallbackElement:<p>Loading ...</p>,
+    hydrateFallbackElement: <p>Loading ...</p>,
     children: [
       {
         index: true,
         element: <Home></Home>,
-       
       },
       {
         path: "plants",
@@ -32,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: "register",
         element: <Register></Register>,
+      },
+      {
+        path: "plantsDetails/:id",
+        element: <PlantsDetails></PlantsDetails>,
       },
     ],
   },
