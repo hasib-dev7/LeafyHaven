@@ -1,11 +1,14 @@
-import { use } from "react";
+import { use, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../../Context/AuthProvider/AuthContext";
 import { toast } from "react-toastify";
+import { Eye, EyeOff } from "lucide-react";
 const Login = () => {
+  const [toggle, setToggle] = useState(false);
   const loaction = useLocation();
   const navigate = useNavigate();
-  console.log(loaction);
+  // console.log(loaction);
+  
   const { signInUser, setUser, googleSignIn } = use(AuthContext);
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -42,6 +45,11 @@ const Login = () => {
       navigate(loaction.state || "/");
     });
   };
+  // toggle password
+  const hangleToggle = (e) => {
+    e.preventDefault();
+    setToggle(!toggle);
+  };
   return (
     <>
       <div className="hero py-10">
@@ -62,14 +70,22 @@ const Login = () => {
                 />
 
                 {/* password */}
-                <label className="label">Password</label>
-                <input
-                  type="password"
-                  name="password"
-                  className="input"
-                  placeholder="Enter Your Password"
-                  required
-                />
+                <div className=" relative">
+                  <input
+                    type={toggle ? "text" : "password"}
+                    name="password"
+                    className="input"
+                    placeholder="Enter Your Password"
+                    required
+                  />
+                  <button
+                    onClick={hangleToggle}
+                    className=" absolute btn btn-xs top-2 right-5"
+                  >
+                    {toggle ? <Eye size={16} strokeWidth={1.25}/> : <EyeOff size={16} strokeWidth={1.25} />}
+                   
+                  </button>
+                </div>
 
                 <button className="btn btn-neutral mt-4">Login</button>
                 {/* Google */}
