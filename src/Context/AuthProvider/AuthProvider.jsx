@@ -2,6 +2,7 @@ import {
   createUserWithEmailAndPassword,
   GoogleAuthProvider,
   onAuthStateChanged,
+  sendPasswordResetEmail,
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
@@ -25,17 +26,21 @@ const AuthProvider = ({ children }) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
   // update user profile
-  const updateUserProfile=(updateUser)=>{
-    return updateProfile(auth.currentUser,updateUser)
-  }
+  const updateUserProfile = (updateUser) => {
+    return updateProfile(auth.currentUser, updateUser);
+  };
   // gogole signIn
-  const googleSignIn=()=>{
-    return signInWithPopup(auth,googleProvider)
-  }
+  const googleSignIn = () => {
+    return signInWithPopup(auth, googleProvider);
+  };
   //   logout
   const logOut = () => {
     setAuthLoading(true);
     return signOut(auth);
+  };
+  // reset password
+  const resetPassword = (email) => {
+    return sendPasswordResetEmail(auth, email);
   };
   //   the current user
   useEffect(() => {
@@ -59,6 +64,7 @@ const AuthProvider = ({ children }) => {
     googleSignIn,
     updateUserProfile,
     logOut,
+    resetPassword,
   };
   return <AuthContext value={userInfo}>{children}</AuthContext>;
 };

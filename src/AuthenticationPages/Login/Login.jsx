@@ -1,15 +1,16 @@
-import { use, useState } from "react";
+import { use, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../../Context/AuthProvider/AuthContext";
 import { toast } from "react-toastify";
 import { Eye, EyeOff } from "lucide-react";
 const Login = () => {
   const [toggle, setToggle] = useState(false);
+  const emailRef = useRef();
   const loaction = useLocation();
   const navigate = useNavigate();
   // console.log(loaction);
-  
-  const { signInUser, setUser, googleSignIn } = use(AuthContext);
+
+  const { signInUser, setUser, googleSignIn,resetPassword } = use(AuthContext);
   const handleLogin = async (e) => {
     e.preventDefault();
     // get form values
@@ -50,6 +51,36 @@ const Login = () => {
     e.preventDefault();
     setToggle(!toggle);
   };
+  // reset password
+const handleReset = async (e) => {
+  e.preventDefault();
+  const email = emailRef.current.value;
+
+  if (!email) {
+    toast.error("Please enter your email address first.");
+    return;
+  }
+
+  try {
+    await resetPassword(email);
+    toast.success("Password reset link has been sent! Check your inbox or spam folder.");
+
+    // If it's a Gmail address, open Gmail automatically
+    if (email.toLowerCase().endsWith("@gmail.com")) {
+      window.open("https://mail.google.com/mail/u/0/#inbox", "_blank");
+    }
+  } catch (err) {
+    console.log(err.code);
+    if (err.code === "auth/user-not-found") {
+      toast.error("No account found with this email address.");
+    } else if (err.code === "auth/invalid-email") {
+      toast.error("Please enter a valid email address.");
+    } else {
+      toast.error("Something went wrong while sending the reset link. Please try again later.");
+    }
+  }
+};
+
   return (
     <>
       <div className="hero py-10">
@@ -66,6 +97,7 @@ const Login = () => {
                   name="email"
                   className="input"
                   placeholder="Enter Your Email"
+                  ref={emailRef}
                   required
                 />
 
@@ -82,9 +114,18 @@ const Login = () => {
                     onClick={hangleToggle}
                     className=" absolute btn btn-xs top-2 right-5"
                   >
-                    {toggle ? <Eye size={16} strokeWidth={1.25}/> : <EyeOff size={16} strokeWidth={1.25} />}
-                   
+                    {toggle ? (
+                      <Eye size={16} strokeWidth={1.25} />
+                    ) : (
+                      <EyeOff size={16} strokeWidth={1.25} />
+                    )}
                   </button>
+                </div>
+                {/* forgot password */}
+                <div>
+                  <a onClick={handleReset} className="link link-hover">
+                    Forgot password?
+                  </a>
                 </div>
 
                 <button className="btn btn-neutral mt-4">Login</button>

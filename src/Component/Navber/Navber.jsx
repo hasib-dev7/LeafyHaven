@@ -105,7 +105,7 @@ const Navber = () => {
               <Link to="/login" className="btn btn-outline">
                 Login
               </Link>
-              <Link t0="/register" className="btn btn-primary">
+              <Link to="/register" className="btn btn-primary">
                 Register
               </Link>
             </div>

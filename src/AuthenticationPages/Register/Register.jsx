@@ -6,6 +6,7 @@ import { Eye, EyeOff } from "lucide-react";
 
 const Register = () => {
   const [toggle, setToggle] = useState(false);
+
   const { createUser, setUser, updateUserProfile, googleSignIn } =
     use(AuthContext);
   const navigate = useNavigate();
@@ -86,6 +87,7 @@ const Register = () => {
     e.preventDefault();
     setToggle(!toggle);
   };
+  
   return (
     <>
       <div className="hero py-10">
