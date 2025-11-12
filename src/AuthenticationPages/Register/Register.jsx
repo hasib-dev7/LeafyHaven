@@ -78,6 +78,8 @@ const Register = () => {
   const handleGoogle = () => {
     googleSignIn().then((res) => {
       setUser(res.user);
+      const userName = res.user.displayName || "User"; // fallback
+      toast.success(`Welcome back, ${userName}! 🎉`, {});
       // path  navigate to home page
       navigate("/");
     });
@@ -87,7 +89,7 @@ const Register = () => {
     e.preventDefault();
     setToggle(!toggle);
   };
-  
+
   return (
     <>
       <div className="hero py-10">
@@ -136,8 +138,11 @@ const Register = () => {
                     onClick={hangleToggle}
                     className=" absolute btn btn-xs top-2 right-5"
                   >
-                    {toggle ? <Eye size={16} strokeWidth={1.25}/> : <EyeOff size={16} strokeWidth={1.25} />}
-                   
+                    {toggle ? (
+                      <Eye size={16} strokeWidth={1.25} />
+                    ) : (
+                      <EyeOff size={16} strokeWidth={1.25} />
+                    )}
                   </button>
                 </div>
 

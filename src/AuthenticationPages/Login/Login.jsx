@@ -42,6 +42,8 @@ const Login = () => {
   const handleGoogle = () => {
     googleSignIn().then((res) => {
       setUser(res.user);
+      const userName = res.user.displayName || "User"; // fallback
+       toast.success(`Welcome back, ${userName}! 🎉`, {});
       // path location to navigate
       navigate(loaction.state || "/");
     });

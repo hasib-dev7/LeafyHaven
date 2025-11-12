@@ -4,6 +4,7 @@ import usePlants from "../../Hooks/usePlants";
 import CareTips from "../../Component/CareTips/CareTips";
 import PlantsExperts from "../../Component/PlantsExperts/PlantsExperts";
 import LoadingSpinner from "../../Component/LoadingSpinner/LoadingSpinner";
+import PlantsProblem from "../../Component/PlantsProblem/PlantsProblem";
 
 const Home = () => {
   const [plants, plantsLoading, error] = usePlants();
@@ -46,6 +47,8 @@ const Home = () => {
       <section className="pb-16">
         <PlantsExperts></PlantsExperts>
       </section>
+     {/*  */}
+     <PlantsProblem></PlantsProblem>
     </>
   );
 };
