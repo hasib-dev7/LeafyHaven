@@ -25,7 +25,7 @@ const Login = () => {
       // path location to navigate
       navigate(loaction.state || "/");
     } catch (err) {
-      console.log("Login error:", err);
+      // console.log("Login error:", err);
       // Customize error messages if needed
       if (err.code === "auth/user-not-found") {
         toast.error("No user found with this email.");
@@ -70,7 +70,7 @@ const handleReset = async (e) => {
       window.open("https://mail.google.com/mail/u/0/#inbox", "_blank");
     }
   } catch (err) {
-    console.log(err.code);
+    // console.log(err.code);
     if (err.code === "auth/user-not-found") {
       toast.error("No account found with this email address.");
     } else if (err.code === "auth/invalid-email") {

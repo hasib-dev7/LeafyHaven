@@ -9,9 +9,9 @@ const Navber = () => {
       .then(() => {
         // console.log("logout success");
       })
-      .catch((err) => {
-        console.log(err);
-      });
+      // .catch((err) => {
+      //   // console.log(err);
+      // });
   };
   const links = (
     <>

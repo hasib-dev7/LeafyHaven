@@ -52,7 +52,7 @@ const Register = () => {
       const signUpUser = res.user;
       updateUserProfile({ displayName: name, photoURL: photo });
       setUser({ ...signUpUser, displayName: name, photoURL: photo });
-      console.log(signUpUser);
+      // console.log(signUpUser);
       // form reset
       e.target.reset();
       toast.success(`Welcome, ${name}! Your account has been created.`);
@@ -71,7 +71,7 @@ const Register = () => {
       } else {
         toast.error("Registration failed. Please try again."); // generic fallback
       }
-      console.log("Registration error:", err.code);
+      // console.log("Registration error:", err.code);
     }
   };
   // google login
